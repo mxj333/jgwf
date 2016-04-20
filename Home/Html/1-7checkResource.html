@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" href="../../Public/Images/sclm.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../../Public/Css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/1-7checkResource.css" />
+    <title>北京市经管文法实验实践教学众创联盟在线云平台</title>
+</head>
+<body>
+    <div id="mg_header">
+        <div class="login">
+            <div class="wrap">
+                <div class="goBack">电子支票的正确填写格式</div>
+                <div class="userInfor">
+                    <div class="l_before hide">
+                        <a href="javascript:void(0);">登录</a>
+                        <a href="javascript:void(0);">注册</a>
+                    </div>
+                    <div class="l_after">
+                        <span>欢迎登录平台！</span>
+                        <a href="2-1userCenter.html">张宪义</a>
+                        <!--<a href="javascript:void(0);">个人中心</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mg_content">
+        <div class="wrap">
+            <div class="che_catalog">
+                <h3>实验课件</h3>
+                <ul class="ca_list">
+                    <li class="on" title="第一章（1）会计的概念与目标">
+                        <img src="../../Tmp/ware1.png" width="120" height="90" alt="第一章（1）会计的概念与目标"  />
+                        <p>第一章（1）会计的概念与目标</p>
+                    </li>
+                    <li title="第一章（2）会计的概念与目标" >
+                        <img src="../Images/doc.png" width="120" height="90" alt="第一章（2）会计的概念与目标" />
+                        <p>第一章（2）会计的概念与目标</p>
+                    </li>
+                    <li title="第一章（3）会计基本假设和会计基础" >
+                        <img src="../Images/ppt.png" width="120" height="90" alt="第一章（3）会计基本假设和会计基础" />
+                        <p>第一章（3）会计基本假设和会计基础</p>
+                    </li>
+                </ul>
+                <a href="1-6dateStudy.html">开始实践</a>
+            </div>
+            <div class="che_resource">
+                <h4>第一章（1）会计的概念与目标</h4>
+                <div id="che_palyer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../Public/Js/jquery.js"></script>
+<script type="text/javascript" src="../../Public/Js/ckplayer/ckplayer.js"></script>
+<script type="text/javascript" src="../Js/homeCommon.js"></script>
+<script type="text/javascript">
+    $(function() {
+        back($(".goBack"));
+        $("#mg_content").css("margin-top",(parseInt($(window).height()) - 580)/2);
+
+        var flashvars={p:1,f:'/jgwf/Tmp/flash.flv',c:0,b:1};
+        var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+        CKobject.embedSWF('../../Public/Js/ckplayer/ckplayer.swf','che_palyer','ckplayer_a1','790','480',flashvars,params);
+        var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+        var support=['iPad','iPhone','ios','android+false','msie10+false'];
+        CKobject.embedHTML5('che_palyer','ckplayer_a1',790,480,video,flashvars,support);
+
+    });
+</script>
+</html>

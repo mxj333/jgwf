@@ -1,0 +1,136 @@
+@l_w: 930px;
+@r_w: 240px;
+@icon_url: "../Images/icons.png";
+
+.news {
+    width: @l_w;
+    float: left;
+    margin-right: 1200px - @l_w - @r_w;
+}
+.border_b (@c: #f5f5f5;@w: 1px) {
+    border-bottom: @c solid @w; 
+}
+.ad {
+    display: block;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin: 30px 0 20px;
+}
+.n_sort {
+    height: 38px;
+    line-height: 40px;
+    .border_b(#f5f5f5,2px);
+    color: #333;
+    font-size: 0;
+    li {
+        display: inline-block;
+        font-size: 16px;
+        text-align: center;
+        height: 38px;
+        padding: 0 20px;
+        cursor: pointer;
+        &:hover,&.on {
+            .border_b(#0050bb,2px);
+        }
+    }
+}
+.n_item {
+    max-height: 222px;
+    padding: 20px 0 10px;
+    .border_b;
+    color: #646464;
+    & > a:first-child {
+        font-size: 24px;
+        color: #333;
+    }
+    a {
+        color: #646464;
+        &:hover {
+            color: #0050bb;
+        }
+    }
+    .i_detail {
+        font-size: 14px;
+        margin-top: 15px;
+        line-height: 25px;
+        max-height: 150px;
+        overflow: hidden;
+        img {
+            float: left;
+            margin-right: 25px;
+        }
+    }
+    .i_keyWord {
+        margin-top: 10px;
+        a {
+            margin-left: 10px;
+            &:first-child {
+                margin-left: 30px;
+            }
+        }
+        & > span {
+            float: right;
+            font-size: 14px;
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.n_more {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.relevant {
+    .special {
+        height: 360px;
+        line-height: 20px;
+        & > a {
+            display: block;
+            width: 200px;
+            max-height: 193px;
+            overflow: hidden;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #646464;
+            font-size: 12px;
+            a {
+                color: #646464;
+            }
+        }
+        a:hover {
+            color: #0050bb;
+        }
+    }
+}
+.notice_list {
+    .n_item {
+        padding: 11px 0 5px;
+        p {
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            text-align: right;
+        }
+        a {
+            display: inline-block;
+            float: left;
+            max-width: 800px;
+            height: 20px;
+            overflow: hidden;
+            text-align: left;
+            color: #333;
+            font-size: 14px;
+            &:hover {
+                color: #0050bb;
+            }
+        }
+    }
+}

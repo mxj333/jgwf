@@ -1,0 +1,67 @@
+@u_center: "../Images/u_center.png";
+
+.noteList {
+    padding: 10px 20px 0;
+    li {
+        color: #646464;
+        padding: 20px 0 10px;
+        border-bottom: #e5e5e5 solid 1px;
+        a {
+            color: #646464;
+            font-size: 16px;
+            &:hover {
+                color: #004fb7;
+            }
+        }
+        .n_detail {
+            color: #333;
+            font-size: 14px;
+            line-height: 25px;
+            margin: 10px 0;
+            overflow: hidden;
+            textarea,input {
+                display: none;
+            }
+            textarea {
+                border: #e5e5e5 solid 1px;
+                resize: none;
+                height: 70px;
+                width: 875px;
+                padding: 5px;
+                line-height: 25px;
+            }
+            input {
+                width: 87px;
+                height: 30px;
+                background: #004fb7;
+                border: #00449d solid 1px;
+                color: #fff;
+                float: right;
+                margin-top: 5px;
+                cursor: pointer;
+            }
+        }
+        .n_func {
+            text-align: right;
+            & > span:first-child {
+                float: left;
+            }
+            .edit,.del {
+                margin-left: 20px;
+                cursor: pointer;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 13px;
+                    height: 14px;
+                    background: url(@u_center) no-repeat -11px -94px;
+                    vertical-align: sub;
+                    margin-right: 5px;
+                }
+            }
+            .edit:before {
+                background-position: -12px -109px
+            }
+        }
+    }
+}

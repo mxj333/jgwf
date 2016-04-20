@@ -1,0 +1,70 @@
+<div class="lgp_cover">
+    <div class="lgp_box">
+        <div class="lgp_head">
+            <label class="lgp_title">标题</label>
+            <span class="lgp_closed">关闭</span>
+        </div>
+        <div class="lgp_detail">
+            <form id="loginBox" action="javascript:void(0);" method="post">
+                <ul class="formList">
+                    <li class="errorMeg"></li>
+                    <li class="f_item ac">
+                        <input type="text" name="ac" />
+                    </li>
+                    <li class="f_item ps">
+                        <input type="password" name="ps" />
+                    </li>
+                    <li class="forget_ps">
+                        <label><input type="checkbox" name="" />自动登录</label>
+                        <a href="javascript:void(0);">忘记密码？</a>
+                    </li>
+                    <li class="f_item signBtn">
+                        <input type="button" value="登 录" name="submit" />
+                    </li>
+                </ul>
+            </form>
+            <div>没有账号？<a href="javascript:void(0);">立即注册>></a></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            placehodler($(".ac"),"账号","#a1a1a1","input[type=text]");
+            placehodler($(".ps"),"密码","#a1a1a1","input[type=password]");
+
+            $("#loginBox input:first").focus();
+            $("#loginBox input[type=text],#loginBox input[type=password]").keydown(function(e) {
+                var e = e || event;
+                if (e.keyCode == 13) {
+                    $(".signBtn input").click(); 
+                }
+            });
+            $(".signBtn input").click(function() {
+                if(loginValidate.isEmpty($("#loginBox input[type=text],#loginBox input[type=password]"),$(".errorMeg"))) {
+                    $.ajax({
+                        type: "POST",
+                        url: "#",
+                        data: $("form").serialize(),
+                        success: function(msg){
+                            window.location.href = "#";
+                        }
+                    });
+                }
+            });
+        });
+        var loginValidate = {
+            msg: ["请输入账号!","请输入密码!"],
+            isEmpty: function(obj, errorMeg) {
+                for(var i = 0,size = obj.size(); i < size; i++) {
+                    if(obj.eq(i).val() == "") {
+                        errorMeg.stop().animate({"opacity":1},0);
+                        errorMeg.html(loginValidate.msg[i]).stop().animate({"opacity":0}, 1000);
+                        obj.eq(i).focus();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        };
+    </script>
+</div>
+

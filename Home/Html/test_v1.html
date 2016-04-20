@@ -1,0 +1,128 @@
+<style type="text/css">
+    .c_ware {position: relative; margin-top: 55px;}
+    .c_ware input {border: none; background: none;position: absolute;width: 200px;height: 20px;padding-left: 5px;color:#646464;font-size: 14px;}
+    .c_ware .error {border: #ab4647 solid 2px;}
+    .c_ware input:hover {border: #004baf solid 2px;}
+    .c_ware .in1 {top: 62px;left: 190px;}
+    .c_ware .in2 {top: 62px;left: 543px;}
+    .c_ware .in3 {top: 85px;left: 137px;}
+    .c_ware .in4 {top: 85px;left: 543px;}
+    .c_ware .in5 {top: 108px;left: 190px;height: 45px;width: 338px;font-size: 20px;font-weight: 700;}
+    .c_ware .in6 {top: 170px;left: 115px;padding-left: 0;text-align: center;width: 67px;}
+    .num input {height: 28px;width: 15px;padding-left: 0;text-align: center;}
+    .num .n1 {top: 128px;left: 535px;}
+    .num .n2 {top: 128px;left: 552px;}
+    .num .n3 {top: 128px;left: 569px;}
+    .num .n4 {top: 128px;left: 587px;}
+    .num .n5 {top: 128px;left: 603px;}
+    .num .n6 {top: 128px;left: 620px;}
+    .num .n7 {top: 128px;left: 637px;}
+    .num .n8 {top: 128px;left: 654px;}
+    .num .n9 {top: 128px;left: 671px;}
+    .num .n10 {top: 128px;left: 688px;}
+    .num .n11 {top: 128px;left: 706px;}
+</style>
+<div class="c_ware">
+    <img src="{baseUrl}/Images/cheque.jpg" width="790" height="300" />
+    <div class="inputBox">
+        <!--<input class="in1" type="text" />
+        <input class="in2" type="text" />-->
+        <input class="in3" type="text" name="in3" />
+        <!--<input class="in4" type="text" />-->
+        <input class="in5" type="text" value="" name="in5" />
+        <!--<div class="num">
+            <input class="n1" type="text" maxlength="1" />
+            <input class="n2" type="text" maxlength="1" />
+            <input class="n3" type="text" maxlength="1" />
+            <input class="n4" type="text" maxlength="1" />
+            <input class="n5" type="text" maxlength="1" />
+            <input class="n6" type="text" maxlength="1" />
+            <input class="n7" type="text" maxlength="1" />
+            <input class="n8" type="text" maxlength="1" />
+            <input class="n9" type="text" maxlength="1" />
+            <input class="n10" type="text" maxlength="1" />
+            <input class="n11" type="text" maxlength="1" />
+        </div>-->
+        <input class="in6" type="text" name="in6" />
+    </div>
+    <div class="resolve">
+        <div class="re_tip hide">
+            <div class="re_error">错误解析</div>
+            <div class="re_score">10分</div>
+        </div>
+        <div class="re_detail hide"></div>
+    </div>
+    <script type="text/javascript">
+        var data,
+        text1 = {"id":"1","wDescription": "张晓天去财务借一张10万元的奖金支票，财务人员填写支票。","wScore": ["人名币大写（10分）","用途（10分）","收款人(10分)"],"wAnswer":["张晓天","壹拾万元整","奖金"],"wErrorAnalysis":["收款人错误<br />正确答案：张晓天。","人民币大写错误<br />正确答案：壹拾万元整。注意事项1、出票日期(大写):数字必须大写,大写数字写法:零、壹、发叁、肆、伍、陆、柒、捌、玖、拾。","用途错误<br />正确答案：奖金。"]},
+        text2 = {"id":"2","wDescription": "贺兰去财务借一张3万元的办公用品支票，财务人员填写支票。","wScore": ["用途（10分）","收款人(10分)","人名币大写（10分）"],"wAnswer":["贺兰","叄万元整","办公用品"],"wErrorAnalysis":["收款人错误<br />正确答案：贺兰。","人民币大写错误<br />正确答案：壹拾万元整。注意事项1、出票日期(大写):数字必须大写,大写数字写法:零、壹、发叁、肆、伍、陆、柒、捌、玖、拾。","用途错误<br />正确答案：办公用品。"]},
+        text3 = {"id":"3","wDescription": "A去财务借一张4万元的旅游支票，财务人员填写支票。","wScore": ["人名币大写（10分）","用途（10分）","收款人(10分)"],"wAnswer":["A","肆万元整","旅游"],"wErrorAnalysis":["收款人错误<br />正确答案：A。","人民币大写错误<br />正确答案：肆万元整。注意事项1、出票日期(大写):数字必须大写,大写数字写法:零、壹、发叁、肆、伍、陆、柒、捌、玖、拾。","用途错误<br />正确答案：旅游。"]};
+        texts = [text1,text2,text3];
+
+        function GetExperimentData(type,id) {
+            if(id != undefined) {
+                switch(type) {
+                    case 1 :
+                        $(".inputBox input").unbind("focus");
+                        data = texts[Math.floor(Math.random()*3)];
+                        while(data.id == id) {
+                            data = texts[Math.floor(Math.random()*3)];
+                        }
+                        break;
+                    case 2 :
+                        data = texts[Math.floor(Math.random()*3)];
+                        while(data.id == id) {
+                            data = texts[Math.floor(Math.random()*3)];
+                        }
+                        $(".inputBox input").bind("focus", function() {
+                            $(".re_detail").show().empty().append("<p>正确答案：" + data.wAnswer[$(this).index()] + "</p>");
+                        });
+                        break;
+                    case 3 :
+                        for(var i = 0, max = texts.length; i < max; i += 1) {
+                            if(texts[i].id == id) {
+                                data = texts[i];
+                            }
+                        }
+                        break;
+                }
+            } else {
+                $(".inputBox input").unbind("focus");
+                data = texts[Math.floor(Math.random()*3)];
+            }
+            ClearForm();
+            return data;
+        }
+        function GetResultData(id) {
+            var score = 0, error = "", data = {};
+            for(var i = 0, max = texts.length; i < max; i += 1) {
+                if(texts[i].id == id) {
+                    var k = 1;
+                    $(".inputBox input").each(function(j) {
+                        if($(this).val() != texts[i].wAnswer[j]) {
+                            $(this).addClass("error");
+                            error += "<p>" + (k++) + "." + texts[i].wErrorAnalysis[j] + "</p>"
+                        } else {
+                            score += 10;
+                        }
+                    });
+                }
+            }
+            uploadError(score, error);
+            data = {
+                "wScore": score,
+                "wResult": $(".courseware form").serialize()
+            }
+            return data;
+        }
+        function uploadError(score, error) {
+            $(".re_tip").show().find(".re_score").text(score + "分");
+            $(".re_detail").show().empty().append(error);
+        }
+        function ClearForm() {
+            $(".inputBox").find("input,textarea").removeClass("error").val("");
+            $(".re_tip,.re_detail").hide();
+        }
+    </script>
+</div>
+

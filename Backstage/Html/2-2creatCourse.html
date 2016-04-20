@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" href="../../Public/Images/sclm.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../../Public/Css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/creatCourse.css" />
+    <title>北京市经管文法实验实践教学众创联盟在线云平台</title>
+</head>
+<body>
+    <div id="mg_header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="1-1index.html">北京林业大学经济管理实验实践教学云平台</a>
+                <span>
+                    欢迎登录平台！
+                    <a href="javascript:void(0);">张宪义</a>
+                </span>
+            </div>
+            <ul class="mainNav">
+                <li><a href="javascript:void(0);">首页</a></li>
+                <li><a href="javascript:void(0);">用户</a></li>
+                <li class="on"><a href="javascript:void(0);">课程</a></li>
+                <li><a href="javascript:void(0);">资讯</a></li>
+                <li><a href="javascript:void(0);">文章</a></li>
+                <li><a href="javascript:void(0);">系统</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="mg_content" class="wrap">
+        <ul class="c_left leftNav">
+            <li class="on"><a href="javascript:void(0);">课程管理</a></li>
+            <li><a href="javascript:void(0);">课程审核</a></li>
+            <li><a href="javascript:void(0);">类型管理</a></li>
+            <li><a href="javascript:void(0);">课程反馈</a></li>
+            <li><a href="javascript:void(0);">评价标准</a></li>
+            <li><a href="javascript:void(0);">课程评论</a></li>
+        </ul>
+        <div class="c_right mainContent">
+            <div class="location">
+                <a href="javascript:void(0);">课程管理</a> >
+                <a href="javascript:void(0);">新增课程</a>
+            </div>
+            <form class="creatCourse" action="javascript:void(0);" method="post" enctype="multipart/form-data">
+                <h3 class="title">创建课程</h3>
+                <ul class="f_list">
+                    <li>
+                        <span class="f_tag h30"><em>*</em>名称：</span>
+                        <input class="h30 w290" type="text" name="name" />
+                    </li>
+                    <li>
+                        <span class="f_tag h30"><em>*</em>封面：</span>
+                        <span class="showPic">
+                            <img width="120px" height="90px" src="../Images/defaultPic.png" />
+                        </span>
+                        <span class="addPic">
+                            <input class="frontCover" type="file" name="frontCover" />
+                            <label class="btn">添加图片</label>
+                        </span>
+                    </li>
+                    <li class="classify">
+                        <span class="f_tag h26"><em>*</em>分类：</span>
+                        <select class="w120 h26" name="classify">
+                            <option>专业</option>
+                        </select>
+                        <select class="w120 h26" name="classify">
+                            <option>行业</option>
+                        </select>
+                    </li>
+                    <li class="classify">
+                        <span class="f_tag h30">介绍：</span>
+                        <textarea class="w590 h130" name="introduce"></textarea>
+                    </li>
+                    <li class="difficulty">
+                        <span class="f_tag"><em>*</em>难易度：</span>
+                        <label><input type="radio" name="difficulty" />难</label>
+                        <label><input type="radio" name="difficulty" />中</label>
+                        <label><input type="radio" name="difficulty" />易</label>
+                    </li>
+                    <li>
+                        <input class="btn nextBtn" type="submit" value="下一步" name="mySubmit" />
+                    </li>
+                </ul>
+            </form>
+            <form class="addCatalog hide" action="javascript:void(0);" method="post">
+                <h3 class="title">添加目录</h3>
+                <ul class="f_list">
+                    <li>
+                        <span class="f_tag h30">上级目录：</span>
+                        <select class="w300 h30" name="prev_catalog">
+                            <option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <span class="f_tag h30">上级目录：</span>
+                        <textarea class="w590 h130" name="next_catalog"></textarea>
+                    </li>
+                    <li>
+                        <input class="btn add_ware" type="submit" value="添加课件" name="myAdd" />
+                        <input class="btn cancle" type="button" value="取消" name="myCancle" />
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div id="mg_footer"></div>
+</body>
+<script type="text/javascript" src="../../Public/Js/jquery.js"></script>
+<script type="text/javascript" src="../Js/creatCourse.js"></script>
+</html>

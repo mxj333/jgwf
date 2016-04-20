@@ -1,0 +1,156 @@
+.mainContent {
+    border: none;
+    color: #333;
+    h2 {
+        border-left: 3px solid #004baf;
+        font-size: 18px;
+        height: 24px;
+        line-height: 24px;
+        padding-left: 20px;
+    }
+    .back {
+        float: right;
+        color: #333;
+        font-size: 16px;
+    }
+}
+.ex_report {
+    min-height: 400px;
+    margin-top: 20px;
+    border: #e5e5e5 solid 1px;
+    h3 {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: #f2f6fb;
+        text-align: center;
+        font-size: 18px;
+        color: #004fb7;
+    }
+}
+.reportList {
+    width: 860px;
+    padding: 27px 0;
+    li {
+        border-top: #e5e5e5 solid 1px;
+        overflow-y: hidden;
+        font-size: 14px;
+        color: #333;
+        h4 {
+            padding: 10px 0 5px;
+            color: #004fb7;
+        }
+    }
+    .list_header {
+        width: 787px;
+        height: 119px;
+        padding: 20px 40px 0;
+        border-left: #e5e5e5 solid 1px;
+        border-right: #e5e5e5 solid 1px;
+        p > label,span {
+            display: block;
+            float: left;
+        }
+        p {
+            margin-bottom: 20px;
+            overflow: hidden;
+            & > label {
+                margin-right: 20px;
+                width: 4em;
+                color: #004fb7;
+                label {
+                    display: block;
+                }
+                .font2 {
+                    letter-spacing: 2em;
+                    margin-right: -2em;
+                }
+            }
+            span {
+                height: 20px;
+                overflow: hidden;
+            }
+        }
+        & > div {
+            height: 100px;
+            float: left;
+        }
+        .firstColumn {
+            width: 305px;
+            span {
+                width: 200px;
+            }
+        }
+        .secondColumn {
+            width: 280px;
+            span {
+                width: 180px;
+            }
+        }
+        .thirdColumn {
+            width: 200px;
+            span {
+                width: 120px;
+            }
+        }
+        & ~ li {
+            padding-left: 20px;
+            p {
+                width: 740px;
+                margin: 0 0 5px;
+                padding: 0 20px;
+                line-height: 25px;
+            }
+        }
+    }
+    .teacherComment {
+        height: 133px;
+        padding: 15px 0;
+    }
+    .comment,em {
+        font-style: normal;
+        color: #004fb7;
+    }
+    .comment {
+        position: relative;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 15px;
+        textarea {
+            width: 740px;
+            height: 80px;
+            padding: 10px;
+            float: right;
+            resize: none;
+            border: #e5e5e5 solid 1px;
+        }
+        .p_tip {
+            top: 17px;
+            left: 89px;
+            line-height: 0;
+        }
+    }
+    .score {
+        padding-left: 80px;
+        text-align: right;
+        label {
+            float: left;
+            &:first-child {
+                margin-right: 90px;
+            }
+        }
+    }
+    .submitBtn {
+        padding: 30px 0 0;
+        text-align: center;
+        input {
+            width: 120px;
+            height: 40px;
+            border: none;
+            background: #004fb7;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

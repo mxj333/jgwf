@@ -1,0 +1,157 @@
+.payPrompt, .orderPrompt {
+    border: #b8b7b7 solid 5px;
+    border-radius: 5px;
+    .lgp_head {
+        height: 46px;
+        line-height: 46px;
+        padding: 0 10px;
+        background: #f7f7f7;
+        color: #666;
+        font-size: 14px;
+        .lgp_closed {
+            width: 13px;
+            height: 13px;
+            margin-top: 15px;
+            background: url(../Images/icons.png) no-repeat -150px -101px;
+        }
+    }
+}
+.payPrompt {
+    .lgp_detail {
+        width: 560px;
+        height: auto;
+        padding: 0;
+    }
+}
+.payList {
+    li {
+        color: #333;
+        border-top: #e5e5e5 solid 1px;
+        font-size: 16px;
+    }
+    .payInfo {
+        margin-top: 15px;
+        border: none;
+        p {
+            line-height: 30px;
+            font-size: 14px;
+            em {
+                font-style: normal;
+                font-size: 24px;
+                color: #9d0c0e;
+                vertical-align: sub;
+            }
+        }
+    }
+    .balance {
+        margin-top: 15px;
+        height: 55px;
+        line-height: 55px;
+        span {
+            font-size: 14px;
+            margin-left: 20px;
+        }
+    }
+    .onlinePay {
+        padding-top: 10px;
+        div {
+            width: 510px;
+            margin-top: 20px;
+            overflow: hidden;
+            a:link {
+                display: block;
+                float: left;
+                width: 148px;
+                height: 38px;
+                margin: 0 10px 20px;
+                text-align: center;
+                border: #e5e5e5 solid 1px;
+            }
+            a:hover, a.on {
+                border-color: #004fb7;
+            }
+        }
+    }
+    .payBtn {
+        padding-top: 20px;
+        a {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 35px;
+            background: #9d0c0e;
+            color: #fff;
+            text-align: center;
+        }
+        span {
+            margin-left: 20px;
+            color: #9d0c0e;
+            font-size: 12px;
+        }
+    }
+}
+.orderPrompt {
+    .lgp_detail {
+        width: 520px;
+        height: 200px;
+        margin-top: 20px;
+        padding: 0;
+        & > a {
+            color: #666;
+        }
+        em {
+            font-style: normal;
+            color: #9d0c0e;
+        }
+        .chooseStudent {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            margin: 20px 20px 0;
+            background: #9d0c0e;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+    }
+    .successTip {
+        height: 55px;
+        color: #666;
+        line-height: 30px;
+        margin-bottom: 30px;
+        p:first-child {
+            font-size: 24px;
+            color: #004fb7;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 55px;
+            float: left;
+            margin-right: 20px;
+            background: url(../Images/icons.png) no-repeat -110px -138px;
+        }
+        a {
+            color: #333;
+            margin: 0 10px;
+            &.on {
+                color: #004fb7;
+            }
+        }
+    }
+    .successDetail {
+        width: 478px;
+        height: 58px;
+        border: #9d0c0e dashed 1px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        p {
+            margin: 5px 0 10px;
+            color: #333;
+            font-size: 14px;
+        }
+    }
+}

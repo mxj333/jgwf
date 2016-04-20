@@ -1,0 +1,95 @@
+@l_w: 930px;
+@r_w: 240px;
+@icon_url: "../Images/icons.png";
+
+.course {
+    width: @l_w;
+    float: left;
+    margin-right: 1200px - @l_w - @r_w;
+    em {
+        font-style: normal;
+        color: #9d0c0e;
+    }
+}
+.ad {
+    display: block;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin: 30px 0;
+}
+.co_sort {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    background: #f5f5f5;
+    font-size: 0;
+    span {
+        font-size: 14px;
+        color: #333;
+        display: inline-block;
+        padding: 0 15px;
+        cursor: pointer;
+        &:first-child {
+            cursor: default;
+            color: #fff;
+            background: #004baf;
+        }
+    }
+    .count {
+        font-size: 12px;
+        float: right;
+    }
+}
+.li_item {
+    display: block;
+    width: 198px;
+    height: 223px;
+    overflow: hidden;
+    float: left;
+    padding: 12px 10px;
+    margin: 18px 0 0 15px;
+    border: #fff solid 1px;
+    font-family: "SimSun";
+    span {
+        display: block;
+        span {
+            margin-top: 10px;
+            color: #646464;
+            &:first-child {
+                font-size: 14px;
+                color: #333;
+                height: 15px;
+                overflow: hidden;
+                width: 100%;
+            }
+        }
+        .satisfied {
+            span {
+                float: right;
+                margin-top: 0;
+            }
+        }
+    }
+    & > span:first-child {
+        width: 200px;
+        height: 150px;
+        text-align: center;
+        background: #f7f7f7;
+    }
+    img {
+        -webkit-transition: all ease .3s;
+        transition: all ease .3s
+    }
+    &:hover {
+        box-shadow: 1px 2px 5px 0 #919191;
+        border-radius: 3px;
+        border: #919191 solid 1px \9;
+        img {
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+    }
+}
+

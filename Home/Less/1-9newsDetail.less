@@ -1,0 +1,174 @@
+@l_w: 930px;
+@r_w: 240px;
+@icon_url: "../Images/icons.png";
+
+.news {
+    width: @l_w;
+    float: left;
+    margin-right: 1200px - @l_w - @r_w;
+}
+.n_detail {
+    font-size: 14px;
+    font-family: "SimSun";
+}
+.d_title {
+    height: 98px;
+    border-bottom: #e5e5e5 solid 2px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    p {
+        margin-top: 30px;
+        span {
+            float: right;
+            a {
+                display: inline-block;
+                color: #333;
+            }
+        }
+        span:first-child {
+            float: left;
+            margin: 4px 30px 0 0;
+        }
+    }
+    .com_count:before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 17px;
+        vertical-align: middle;
+        margin-right: 5px;
+        background: url(@icon_url) no-repeat -35px -203px;
+    }
+}
+.d_content {
+    color: #646464;
+    line-height: 25px;
+    p {
+        margin-top: 30px;
+    }
+    .d_abstarct {
+        span {
+            color: #333;
+            font-weight: 700;
+        }
+    }
+    .txt {
+        p,span,h3 {
+            margin: 30px 0;
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+        h3 {
+            font-weight: 700;
+        }
+    }
+}
+.d_keysWord {
+    span {
+        font-weight: 700;
+    }
+    a {
+        color: #0050bb;
+        margin-right: 10px;
+    }
+}
+.n_title {
+    font-size: 16px;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: #0050bb solid 2px;
+}
+.rel_reading {
+    div {
+        float: left;
+        width: 418px;
+        padding-left: 30px;
+        border-left: #e5e5e5 solid 2px;
+        margin-top: 20px;
+        height: 175px;
+        a {
+            display: block;
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 18px;
+            width: 388px;
+            &:hover {
+                color: #0050bb;
+            }
+        }
+    }
+    h2 + div {
+        padding-left: 0;
+        border-left: none;
+    }
+}
+.relevant {
+    .rec_reading {
+        height: 370px;
+        h2 + a {
+            height: 150px;
+            margin: 20px 0 10px;
+        }
+    }
+    div > a {
+        display: block;
+        width: 100%;
+        height: 18px;
+        color: #333;
+        margin-bottom: 15px;
+        overflow: hidden;
+        &:hover {
+            color: #004baf;
+        }
+    }
+    .picNews {
+        height: 230px;
+        .pics {
+            margin: 20px 0 10px;
+            .car_btns {
+                position: absolute;
+                top: 50% - 12;
+                cursor: pointer;
+                left: 0;
+                width: 19px;
+                height: 34px;
+                background: url(@icon_url) no-repeat -106px -77px;
+            }
+            .car_next {
+                left: 200px - 19px;
+                background-position: -85px -77px;
+            }
+        }
+    }
+    .videoNews {
+        height: 445px;
+        a {
+            height: 180px;
+            margin-top: 20px;
+            img {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.noticeDetail {
+    .d_title {
+        color: 333;
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}

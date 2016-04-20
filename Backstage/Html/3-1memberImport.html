@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" href="../../Public/Images/sclm.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../../Public/Css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/3-1memberImport.css" />
+    <title>北京市经管文法实验实践教学众创联盟在线云平台</title>
+</head>
+<body>
+    <div id="mg_header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="1-1index.html">北京林业大学经济管理实验实践教学云平台</a>
+                <span>
+                    欢迎登录平台！
+                    <a href="javascript:void(0);">张宪义</a>
+                </span>
+            </div>
+            <ul class="mainNav">
+                <li><a href="javascript:void(0);">首页</a></li>
+                <li class="on"><a href="javascript:void(0);">用户</a></li>
+                <li><a href="javascript:void(0);">课程</a></li>
+                <li><a href="javascript:void(0);">资讯</a></li>
+                <li><a href="javascript:void(0);">文章</a></li>
+                <li><a href="javascript:void(0);">系统</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="mg_content" class="wrap">
+        <ul class="c_left leftNav">
+            <li><a href="javascript:void(0);">前台用户</a></li>
+            <li class="on"><a href="javascript:void(0);">用户导入</a></li>
+            <li><a href="javascript:void(0);">后台角色</a></li>
+            <li><a href="javascript:void(0);">后台角色</a></li>
+        </ul>
+        <div class="c_right mainContent">
+            <form action="javascript:void(0);" method="get">
+                <h3 class="title">用户导入</h3>
+                <ul class="memberImport">
+                    <li>
+                        <div>第一步：</div>
+                        <div>
+                            <p>获取EXCEL文件模板，并填写内容</p>
+                            <p>
+                                <a href="javascript:void(0);">用户示例模板</a>
+                                <a href="javascript:void(0);">用户文件模板</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>注意事项：</div>
+                        <div>
+                            <p>请将用户信息填写至用户文件模板表中</p>
+                            <p>如不清楚如何填写，请点击下载查看用户示例模板</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>第二步：</div>
+                        <div>
+                            <p>导入填写好的文件</p>
+                            <p>注：只允许xls文件上传，不支持高版本xlsx</p>
+                            <p class="fileBtn">
+                                数据导入来源：
+                                <input type="file" data-type="xls" />
+                                <span class="btn">上传文件</span>
+                                <label>未选择文件...</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="hide">
+                        <input class="btn" type="submit" name="save" value="保存" />
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div id="mg_footer"></div>
+</body>
+<script type="text/javascript" src="../../Public/Js/jquery.js"></script>
+<script type="text/javascript">
+    var fileValidate = {
+        filevalidate: function(obj,o,correctFunc,errorFunc) {
+            if(obj.data("type")) {
+                var tags = obj.data("type").split(" ");
+                var name = o.files[0].name;
+                var type = name.slice(name.lastIndexOf(".") + 1);
+                for(var i = 0; i < tags.length; i++) {
+                    if(tags[i] == type) {
+                        if(typeof correctFunc == "function") correctFunc();
+                        return;
+                    }
+                    if(i == tags.length - 1) {
+                        obj.val("");
+                        if(typeof errorFunc == "function") errorFunc();
+                    }
+                }
+            }
+        }
+    };
+    $(function() {
+        $(".fileBtn input").change(function() {
+            var obj = $(this);
+            fileValidate.filevalidate(obj,this,function() {
+                obj.siblings("label").html(obj.val());
+                $("input[type=submit]").parent().show();
+            },function() {
+                obj.siblings("label").html("上传格式错误！");
+                $("input[type=submit]").parent().hide();
+            });
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" href="../../Public/Images/sclm.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../../Public/Css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/2-1courseList.css" />
+    <title>北京市经管文法实验实践教学众创联盟在线云平台</title>
+</head>
+<body>
+    <div id="mg_header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="1-1index.html">北京林业大学经济管理实验实践教学云平台</a>
+                <span>
+                    欢迎登录平台！
+                    <a href="javascript:void(0);">张宪义</a>
+                </span>
+            </div>
+            <ul class="mainNav">
+                <li><a href="javascript:void(0);">首页</a></li>
+                <li><a href="javascript:void(0);">用户</a></li>
+                <li class="on"><a href="javascript:void(0);">课程</a></li>
+                <li><a href="javascript:void(0);">资讯</a></li>
+                <li><a href="javascript:void(0);">文章</a></li>
+                <li><a href="javascript:void(0);">系统</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="mg_content" class="wrap">
+        <ul class="c_left leftNav">
+            <li class="on"><a href="javascript:void(0);">课程管理</a></li>
+            <li><a href="javascript:void(0);">课程审核</a></li>
+            <li><a href="javascript:void(0);">类型管理</a></li>
+            <li><a href="javascript:void(0);">课程反馈</a></li>
+            <li><a href="javascript:void(0);">评价标准</a></li>
+            <li><a href="javascript:void(0);">课程评论</a></li>
+        </ul>
+        <div class="c_right mainContent">
+            <form class="c_search" action="javascript:void(0);" method="get">
+                <span class="w340">
+                    <label class="tag">课程名称：</label>
+                    <input type="text" name="c_name" />
+                </span>
+                <span class="w340">
+                    <label class="tag">机构名称：</label>
+                    <input type="text" name="o_name" />
+                </span>
+                <span class="w340">
+                    <label class="tag">分类：</label>
+                    <select name="profession">
+                        <option>专业</option>
+                    </select>
+                    <select name="industry">
+                        <option>行业</option>
+                    </select>
+                </span>
+                <span class="w340">
+                    <label class="tag">满意度：</label>
+                    <select name="industry">
+                        <option>80%以上</option>
+                    </select>
+                </span>
+                <span class="w340">
+                    <label class="tag">难易度：</label>
+                    <select name="industry">
+                        <option>全部</option>
+                    </select>
+                </span>
+                <button class="btn searchBtn" type="submit" value="搜索">搜索</button>
+            </form>
+            <div class="funcKeys">
+                <a class="btn" href="javascript:void(0);">增加</a>
+                <a class="btn batch_del" href="javascript:void(0);">移除</a>
+            </div>
+            <div class="list">
+                <ul class="list_header">
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            编号
+                        </span>
+                        <span style="width:15%;">名称</span>
+                        <span style="width:15%;">分类</span>
+                        <span style="width:10%;">难易度</span>
+                        <span style="width:15%;">学习人数</span>
+                        <span style="width:10%;">满意度</span>
+                        <span style="width:10%;">状态</span>
+                        <span style="width:15%;">操作</span>
+                    </li>
+                </ul>
+                <ul class="list_list">
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            1
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="cata"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            2
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            3
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            4
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            5
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            6
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            7
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            8
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            9
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span style="width:10%;">
+                            <input type="checkBox" name="number" />
+                            10
+                        </span>
+                        <span style="width:15%;">基础会计学</span>
+                        <span style="width:15%;">会计学、林业</span>
+                        <span style="width:10%;">难</span>
+                        <span style="width:15%;">456</span>
+                        <span style="width:10%;">80%</span>
+                        <span style="width:10%;">发布</span>
+                        <span style="width:15%;">
+                            <span class="edit"></span>
+                            <span class="del"></span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pages">
+                <a href="javascript:void(0);"> 上一页 </a>
+                <a class="on" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">5</a>
+                <a href="javascript:void(0);">6</a>
+                <a href="javascript:void(0);">7</a>
+                <a href="javascript:void(0);">8</a>
+                <a href="javascript:void(0);">9</a>
+                <a href="javascript:void(0);">10</a>
+                <span><em>1</em>/30</span>
+                <a href="javascript:void(0);"> 下一页 </a>
+            </div>
+        </div>
+    </div>
+    <div id="mg_footer"></div>
+</body>
+<script type="text/javascript" src="../../Public/Js/jquery.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $(".list_list li:nth-child(even)").addClass("even");
+    });
+</script>
+</html>

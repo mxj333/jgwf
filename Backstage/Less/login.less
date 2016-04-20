@@ -1,0 +1,101 @@
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../Images/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../Images/bg.jpg",sizingMethod=scale);
+    overflow: hidden;
+}
+#mg_content {
+    width: 400px;
+    height: 360px;
+    position: absolute;
+    top: 25%;
+    left: 38%;
+    background: url(../Images/formBg.jpg) no-repeat;
+    box-shadow: 0px 0px 5px 1px rgba(0,39,91,.7);
+}
+.l_header {
+    height: 75px;
+    line-height: 75px;
+    img,span {
+        float: left;
+    }
+    span {
+        color: #004baf;
+        font-size: 24px;
+    }
+    img {
+        margin: 12px 10px 0 30px;
+    }
+}
+.login {
+    width: 304px;
+    height: 250px;
+    background: #eef5ff;
+    padding: 20px 43px 0;
+    li {
+        margin-bottom: 10px;
+        overflow: hidden;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        color: #333;
+        label {
+            float: left;
+            display: block;
+            width: 45px;
+            height: 36px;
+            text-align: right;
+            margin-right: 15px;
+        }
+        &.errorMeg {
+            font-size: 12px;
+            color: #9b2526;
+            height: 15px;
+            line-height: 15px;
+            margin: 0 0 5px 60px;
+            opacity: 0;
+            filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+        }
+        input {
+            width: 235px;
+            height: 34px;
+            line-height: 34px;
+            border: #646464 solid 1px;
+            padding-left: 5px;
+            float: left;
+            cursor: pointer;
+        }
+        &.on {
+            input {
+                border-color: #004baf;
+            }
+        }
+        &.identifCode {
+            input {
+                width: 118px;
+                margin-right: 17px;
+            }
+            img {
+                width: 98px;
+                height: 34px;
+                overflow: hidden;
+                border: #646464 solid 1px;
+                cursor: pointer;
+            }
+        }
+        &.loginBtn {
+            margin-top: 20px;
+            input {
+                width: 240px;
+                height: 36px;
+                color: #fff;
+                background: #004baf;
+                border-radius: 5px;
+                border-color: #024caf;
+            }
+        }
+    }
+}

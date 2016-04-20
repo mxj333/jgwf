@@ -1,0 +1,100 @@
+.infor {
+    width: 870px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #333;
+    h2 {
+        padding-bottom: 10px;
+        border-bottom: #e5e5e5 solid 2px;
+        font-size: 18px;
+        color: #646464;
+        span {
+            float: right;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #004fb7;
+            cursor: pointer;
+        }
+    }
+    & > ul > li {
+        line-height: 30px;
+        margin-top: 20px;
+        overflow-y: hidden;
+    }
+    .tip {
+        display: block;
+        float: left;
+        width: 100px;
+        margin-right: 40px;
+        text-align: right;
+        color: #646464;
+    }
+    input[type=text], .ul_select, textarea {
+        height: 28px;
+        border: #e5e5e5 solid 1px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px rgba(229,229,229,.75) inset;
+    }
+    .sexBox {
+        label {
+            input[type=radio] {
+                display: none;
+            }
+            display: block;
+            float: left;
+            margin: 0 14px 0 8px;
+            cursor: pointer;
+            &:before {
+                content: "";
+                display: block;
+                float: left;
+                width: 13px;
+                height: 13px;
+                margin: 11px 10px 0 0;
+                background: url(../Images/icons.png) no-repeat -79px -15px;
+            }
+            &.on:before {
+                background-position: -66px -15px;
+            }
+        }
+    }
+    .ul_select {
+        float: left;
+        margin-right: 20px;
+        li {
+            height: 28px;
+            line-height: 28px;
+        }
+        p {
+            &:after {
+                top: 12px;
+            }
+        }
+    }
+    input[type=text] {
+        width: 200px;
+        line-height: 28px;
+        padding-left: 5px;
+    }
+    input.date {
+        background: #fff url(../Images/date.gif) no-repeat 98% 50%;
+    }
+    textarea {
+        width: 240px;
+        height: 70px;
+        padding: 5px;
+        resize: none;
+    }
+}
+.personalInfor {
+    .editBox {
+        position: absolute;
+        z-index: 8;
+        &:hover {
+            z-index: 9;
+        }
+    }
+    .introduce {
+        height: 80px;
+    }
+}
